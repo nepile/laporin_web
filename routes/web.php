@@ -1,6 +1,6 @@
 <?php
 
-use App\HomeController as Home;
+use App\Http\Controllers\LandingPage\LandingPageController as LandingPage;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [Home::class, 'home'])->name('home');
+Route::get('/', [LandingPage::class, 'home'])->name('home');

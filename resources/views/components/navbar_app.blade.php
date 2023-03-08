@@ -12,7 +12,7 @@
 
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto">
-                <a href="{{ route('home') }}" class="nav-item nav-link text-center mx-4" @if($id_page == 'app-1') style="color: #5BC0F8; border-bottom: 2px solid #5BC0F8;" @endif>Home</a>
+                <a href="{{ route('home') }}" class="nav-item nav-link text-center mx-4" @if($id_page == 'lp-1') style="color: #5BC0F8; border-bottom: 2px solid #5BC0F8;" @endif>Home</a>
                 <a href="./src/portfolio.html" class="nav-item nav-link text-center mx-4">Portfolio</a>
                 <a href="./src/service.html" class="nav-item nav-link text-center mx-4">Services</a>
                 <a href="./src/about.html" class="nav-item nav-link text-center mx-4">About Me</a>

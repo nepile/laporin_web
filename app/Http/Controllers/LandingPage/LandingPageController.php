@@ -1,19 +1,19 @@
 <?php
 
-namespace App;
+namespace App\Http\Controllers\LandingPage;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class LandingPageController extends Controller
 {
     public function home()
     {
         $data = [
             'title' => 'Sampaikan laporan pengaduan dan aspirasi bersama kami',
-            'id_page' => 'app-1',
+            'id_page' => 'lp-1'
         ];
 
-        return view('app.home', $data);
+        return view('landing_page.home', $data);
     }
 }

@@ -1,4 +1,4 @@
-@extends('templates.app')
+@extends('templates.lp')
 
 @section('app-content')
 <div class="container-fluid" style="background-image: radial-gradient(circle at 12% 55%,rgba(33,150,243,.15),hsla(0,0%,100%,0) 25%),radial-gradient(circle at 85% 33%,rgba(108,99,255,.175),hsla(0,0%,100%,0)   25%)">
