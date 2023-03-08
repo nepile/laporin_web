@@ -21,5 +21,31 @@
         </div>
     </div>
 </div>
-    
+
+<div class="container-fluid">
+    <div class="row align-items-center py-4 px-4 px-xl-0 justify-content-evenly">
+        <div class="col-xl-4 d-flex justify-content-center flex-column text-center text-xl-start">
+            <h2 class="mb-0" style="vertical-align: middle;">
+                <strong>
+                    Partnership
+                </strong>
+            </h2>
+            <p style="font-size: 20px;">
+                Instansi dan Organisasi terkait.
+            </p>
+        </div>
+
+        <div class="col-xl-6">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-6 col-xl-5 d-flex align-items-center" style="border-right: 1px solid #000;">
+                    <img src="{{ asset('img/telkomdn.png') }}" style="width: 100%;" alt="smk telkom medan">
+                </div>
+                <div class="col-6 col-xl-4 d-flex align-items-center">
+                    <img src="./assets/logo_external/crowdit.png" style="width: 100%;" alt="webdev.skatel">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 @endsection

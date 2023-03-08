@@ -12,6 +12,8 @@
 <body>
     @include('components.navbar_app')
     @yield('app-content')
+    @include('components.footer_lp')
     <script src="{{ asset('js/bs5.js') }}"></script>
+    <script src="https://kit.fontawesome.com/a0f5cf7da9.js" crossorigin="anonymous"></script>
 </body>
 </html>
