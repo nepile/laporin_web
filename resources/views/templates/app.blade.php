@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ $title }} | Laporin</title>
     <link rel="stylesheet" href="{{ asset('css/bs5.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/font.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/public.css') }}">
 </head>
 <body>
 
