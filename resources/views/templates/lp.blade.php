@@ -10,7 +10,7 @@
     <link rel="icon" href="{{ asset('img/icon.ico') }}">
 </head>
 <body>
-    @include('components.navbar_app')
+    @include('components.navbar_lp')
     @yield('app-content')
     @include('components.footer_lp')
     <script src="{{ asset('js/bs5.js') }}"></script>
