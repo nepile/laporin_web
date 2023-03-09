@@ -5,6 +5,7 @@
     <div class="container">
         <div class="row justify-content-between align-items-center position-relative" style="height: 100vh; top: 2em">
             <div class="col-xl-5 mt-5 mt-xl-0">
+                <h5 style="font-weight: 600">Hi Lapers! apa keluhan anda?</h5>
                 <h1 class="text-center text-xl-start" style="font-weight: 800;">Aplikasi <span style="color: #5BC0F8">Manajemen Laporan</span> Masyarakat.</h1>
                 <p class="text-center text-xl-start">
                     Platform digital yang menampung laporan aspirasi dan pengaduan dari masyarakat sekitar.
@@ -15,7 +16,7 @@
                 </div>
             </div>
 
-            <div class="col-xl-6">
+            <div class="col-xl-7">
                 <img src="{{ asset('img/ils1.png') }}" style="object-fit: cover; width: 100%" alt="">
             </div>
         </div>
@@ -40,8 +41,8 @@
                 <div class="col-6 col-xl-5 d-flex align-items-center" style="border-right: 1px solid #000;">
                     <img src="{{ asset('img/telkomdn.png') }}" style="width: 100%;" alt="smk telkom medan">
                 </div>
-                <div class="col-6 col-xl-4 d-flex align-items-center">
-                    <img src="./assets/logo_external/crowdit.png" style="width: 100%;" alt="webdev.skatel">
+                <div class="col-6 col-xl-3 d-flex align-items-center">
+                    <img src="{{ asset('img/webdev.png') }}" style="width: 100%;" alt="webdev.skatel">
                 </div>
             </div>
         </div>
