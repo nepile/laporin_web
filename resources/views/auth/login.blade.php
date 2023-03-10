@@ -13,10 +13,9 @@
     <div class="container-fluid">
         <div class="row bg-primary" style="height: 100vh;">
             <div class="col-xl-4 p-4" style="height: 100%; background: #fff;">
-
                 <a href="{{ route('home') }}" style="text-decoration: none; color: #000">
                     <div class="col-12 d-flex align-items-center">
-                        <img src="{{ asset('img/logo.png') }}" style="width: 70px;">
+                        <img src="{{ asset('img/logo2.png') }}" style="width: 70px;">
                         <h5 class="ms-2" style="font-weight: bold;">Laporin</h5>
                     </div>    
                 </a>

@@ -14,7 +14,7 @@
     
     @include('components.navbar')
     @yield('dash-content')
-    
+    @include('components.footer')
     <script src="{{ asset('js/bs5.js') }}"></script>
     <script src="https://kit.fontawesome.com/a0f5cf7da9.js" crossorigin="anonymous"></script>
 </body>
