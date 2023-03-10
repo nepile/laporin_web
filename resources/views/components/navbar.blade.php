@@ -36,14 +36,12 @@
                       <li><a class="dropdown-item" href="#">Management Petugas</a></li>
                     </ul>
                   </li>
-                <a href="#" class="nav-item nav-link text-center mx-4">News</a>
+                <a href="#" class="nav-item nav-link text-center mx-4">Berita</a>
             </div>
 
             <div class="navbar-nav ms-auto text-center">
-                <a href="https://wa.me/+6285767621250?text=Halo%20Neville..%20Mau%20nanya2%20nih..." target="_blank"
-                    class="bg-danger nav-item nav-link btn text-light px-4 mx-4"
-                    style="border-radius: 20px; font-weight: bold; border: 0">
-                    Contact Me
+                <a href="" class="bg-dark nav-item nav-link btn text-light px-4 mx-4" style="border-radius: 20px; font-weight: bold; border: 0">
+                    <i class="fa fa-cog"></i> <span class="ms-1">Pengaturan</span>
                 </a>
             </div>
             @endif
