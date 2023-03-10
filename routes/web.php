@@ -13,4 +13,4 @@ Route::get('/laporin_publik', [LandingPage::class, 'laporin_publik'])->name('lap
 Route::get('/login', [Auth::class, 'v_login'])->name('login');
 
 // dashboard
-Route::get('/overview', [Overview::class, 'index']);
+Route::get('/overview', [Overview::class, 'index'])->name('overview');
