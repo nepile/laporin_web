@@ -10,9 +10,9 @@
     <link rel="icon" href="{{ asset('img/icon.ico') }}">
 </head>
 <body>
-    @include('components.navbar_lp')
+    @include('components.navbar')
     @yield('lp-content')
-    @include('components.footer_lp')
+    @include('components.footer')
     <script src="{{ asset('js/bs5.js') }}"></script>
     <script src="https://kit.fontawesome.com/a0f5cf7da9.js" crossorigin="anonymous"></script>
 </body>
