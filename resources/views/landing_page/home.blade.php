@@ -47,6 +47,33 @@
             </div>
         </div>
     </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="container rounded p-3 my-2">
+                <div class="text-center mb-4">
+                    <h3 class="mb-0" style="font-weight: bold">Tentang Kami</h3>
+                    <p>Deskripsi singkat mengenai Laporin</p>
+                </div>
+                <div class="d-flex">
+                    <div class="col-xl-4 bg-danger">
+                        ini gambar
+                    </div>
+                    <div class="col-xl-8 bg-warning ms-3">
+                        ini content
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="container bg-warning rounded p-3 my-3">
+                mm
+            </div>
+        </div>
+    </div>
 </div>
 
 @endsection
