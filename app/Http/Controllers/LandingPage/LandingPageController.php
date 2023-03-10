@@ -16,4 +16,14 @@ class LandingPageController extends Controller
 
         return view('landing_page.home', $data);
     }
+
+    public function laporin_publik()
+    {
+        $data = [
+            'title' => 'Rekapan data laporan publik',
+            'id_page' => 'lp-2',
+        ];
+
+        return view('landing_page.laporin_publik', $data);
+    }
 }

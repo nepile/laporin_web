@@ -13,7 +13,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto">
                 <a href="{{ route('home') }}" class="nav-item nav-link text-center mx-4" @if($id_page == 'lp-1') style="color: #5BC0F8; border-bottom: 2px solid #5BC0F8;" @endif>Beranda</a>
-                <a href="" class="nav-item nav-link text-center mx-4">Laporan Publik</a>
+                <a href="{{ route('laporin_publik') }}" class="nav-item nav-link text-center mx-4" @if($id_page == 'lp-2') style="color: #5BC0F8; border-bottom: 2px solid #5BC0F8;" @endif>Laporan Publik</a>
                 <a href="" class="nav-item nav-link text-center mx-4">Tentang Kami</a>
             </div>
 
