@@ -1,4 +1,4 @@
-@php $id_page = 'dash'; @endphp
+@php $id_template = 'dash'; @endphp
 <!DOCTYPE html>
 <html lang="en">
 <head>

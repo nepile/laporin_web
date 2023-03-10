@@ -1,4 +1,4 @@
-@php $id_page = 'lp'; @endphp
+@php $id_template = 'lp'; @endphp
 <!DOCTYPE html>
 <html lang="en">
 <head>
