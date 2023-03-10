@@ -9,5 +9,7 @@ class AuthController extends Controller
 {
     public function v_login()
     {
+        $title = 'Portal Login';
+        return view('auth.login', compact('title'));
     }
 }

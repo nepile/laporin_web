@@ -17,7 +17,7 @@
                     <a href="{{ route('home') }}" class="nav-item nav-link text-center mx-4" @if($id_page == 'lp-1') style="color: #5BC0F8; border-bottom: 2px solid #5BC0F8;" @endif>Beranda</a>
                     <a href="{{ route('laporin_publik') }}" class="nav-item nav-link text-center me-4" @if($id_page == 'lp-2') style="color: #5BC0F8; border-bottom: 2px solid #5BC0F8;" @endif>Laporan Publik</a>
                 </div>
-                <a class="nav-item nav-link btn text-light px-3 me-xl-4" style="border: 0; background: #5BC0F8">
+                <a href="{{ route('login') }}" class="nav-item nav-link btn text-light px-3 me-xl-4" style="border: 0; background: #5BC0F8">
                     Masuk
                 </a>
             </div>
