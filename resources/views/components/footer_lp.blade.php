@@ -25,11 +25,8 @@
             <a class="text-decoration-none" href="{{ route('home') }}">
                 <p class="mb-0 text-light">Beranda</p>
             </a>
-            <a class="text-decoration-none" href="#">
+            <a class="text-decoration-none" href="{{ route('laporin_publik') }}">
                 <p class="mb-0 text-light">Laporan Publik</p>
-            </a>
-            <a class="text-decoration-none" href="#">
-                <p class="mb-0 text-light">Tentang Kami</p>
             </a>
         </div>
 
@@ -39,11 +36,6 @@
                 target="_blank">
                 <i class="fa fa-instagram me-1" aria-hidden="true"></i>
                 <span>Instagram</span>
-            </a>
-
-            <a class="d-block text-decoration-none text-light" href="#" target="_blank">
-                <i class="fa me-1 fa-linkedin" aria-hidden="true"></i>
-                <span>LinkedIn</span>
             </a>
 
             <a class="d-block text-decoration-none text-light" href="#" target="_blank">

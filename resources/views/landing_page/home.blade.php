@@ -5,13 +5,13 @@
     <div class="container">
         <div class="row justify-content-between align-items-center position-relative" style="height: 100vh; top: 2em">
             <div class="col-xl-5 mt-5 mt-xl-0">
-                <h5 style="font-weight: 600">Hi Lapers! apa keluhan anda?</h5>
+                <h6 class="text-center text-xl-start" style="font-weight: 600">Hi Lapers! apa keluhan anda?</h6>
                 <h1 class="text-center text-xl-start" style="font-weight: 800;">Aplikasi <span style="color: #5BC0F8">Manajemen Laporan</span> Masyarakat.</h1>
                 <p class="text-center text-xl-start">
                     Platform digital yang menampung laporan aspirasi dan pengaduan dari masyarakat sekitar.
                 </p>
                 <div class="text-center text-xl-start">
-                    <button class="btn btn-dark px-3" style="height: 7vh;">Selengkapnya</button>
+                    <button class="btn btn-dark px-3" style="height: 7vh;">Lihat Laporan</button>
                     <button class="btn text-dark" style="height: 7vh;">Hubungi kami</button>    
                 </div>
             </div>
@@ -23,7 +23,7 @@
     </div>
 </div>
 
-<div class="container-fluid">
+<div class="container-fluid mt-3 mt-xl-0 my-3">
     <div class="row align-items-center py-4 px-4 px-xl-0 justify-content-evenly">
         <div class="col-xl-4 d-flex justify-content-center flex-column text-center text-xl-start">
             <h2 class="mb-0" style="vertical-align: middle;">
@@ -48,32 +48,6 @@
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-12">
-            <div class="container rounded p-3 my-2">
-                <div class="text-center mb-4">
-                    <h3 class="mb-0" style="font-weight: bold">Tentang Kami</h3>
-                    <p>Deskripsi singkat mengenai Laporin</p>
-                </div>
-                <div class="d-flex">
-                    <div class="col-xl-4 bg-danger">
-                        ini gambar
-                    </div>
-                    <div class="col-xl-8 bg-warning ms-3">
-                        ini content
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-12">
-            <div class="container bg-warning rounded p-3 my-3">
-                mm
-            </div>
-        </div>
-    </div>
 </div>
 
 @endsection
