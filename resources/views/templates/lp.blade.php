@@ -1,3 +1,4 @@
+@php $id_page = 'lp'; @endphp
 <!DOCTYPE html>
 <html lang="en">
 <head>
