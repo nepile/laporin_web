@@ -22,12 +22,33 @@
 
         <div class="col-xl-3 col-sm-12 col-md-12 my-2 mb-4">
             <h3>Menu</h3>
+            @if($id_template == 'lp')
             <a class="text-decoration-none" href="{{ route('home') }}">
                 <p class="mb-0 text-light">Beranda</p>
             </a>
             <a class="text-decoration-none" href="{{ route('laporin_publik') }}">
                 <p class="mb-0 text-light">Laporan Publik</p>
             </a>
+            @elseif($id_template == 'dash')
+            <a class="text-decoration-none" href="{{ route('overview') }}">
+                <p class="mb-0 text-light">Overview</p>
+            </a>
+            <a class="text-decoration-none" href="{{ route('data_laporan') }}">
+                <p class="mb-0 text-light">Data Laporan</p>
+            </a>
+            <a class="text-decoration-none" href="{{ route('management_masyarakat') }}">
+                <p class="mb-0 text-light">Management Masyarakat</p>
+            </a>
+            <a class="text-decoration-none" href="{{ route('management_petugas') }}">
+                <p class="mb-0 text-light">Management Petugas</p>
+            </a>
+            <a class="text-decoration-none" href="{{ route('berita') }}">
+                <p class="mb-0 text-light">Berita</p>
+            </a>
+            <a class="text-decoration-none" href="{{ route('pengaturan') }}">
+                <p class="mb-0 text-light">Pengaturan</p>
+            </a>
+            @endif
         </div>
 
         <div class="col-xl-3 col-sm-12 col-md-12 my-2 mb-4">
