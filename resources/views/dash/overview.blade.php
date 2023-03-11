@@ -24,7 +24,7 @@
                             </p>
                         </div>
                         <p class="mb-0 text-danger" style="font-weight: 800; font-size: 21px"> 
-                            80
+                            {{ $count_laporan }}
                         </p>
                     </div>
                 </div>
