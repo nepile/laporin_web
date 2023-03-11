@@ -18,7 +18,7 @@
                 <div class="card">
                     <div class="card-body d-flex justify-content-between align-items-center">
                         <div class="">
-                            <span style="font-weight: 600" class="text-danger">Jumlah Laporan</span>
+                            <span style="font-weight: 400" class="text-danger">Jumlah Laporan</span>
                             <p class="mt-3 mb-0">
                                 <i class="fa text-danger fa-file-text" aria-hidden="true" style="font-size: 30px"></i>
                             </p>
@@ -34,7 +34,7 @@
                 <div class="card">
                     <div class="card-body d-flex justify-content-between align-items-center">
                         <div class="">
-                            <span style="font-weight: 600" class="text-primary">Jumlah Masyarakat</span>
+                            <span style="font-weight: 400" class="text-primary">Jumlah Masyarakat</span>
                             <p class="mt-3 mb-0">
                                 <i class="fa text-primary fa-users" aria-hidden="true" style="font-size: 30px"></i>
                             </p>
@@ -50,7 +50,7 @@
                 <div class="card">
                     <div class="card-body d-flex justify-content-between align-items-center">
                         <div class="">
-                            <span style="font-weight: 600" class="text-warning">Jumlah Petugas</span>
+                            <span style="font-weight: 400" class="text-warning">Jumlah Petugas</span>
                             <p class="mt-3 mb-0">
                                 <i class="fa text-warning fa-user-secret" aria-hidden="true" style="font-size: 30px"></i>
                             </p>
@@ -66,7 +66,7 @@
                 <div class="card">
                     <div class="card-body d-flex justify-content-between align-items-center">
                         <div class="">
-                            <span style="font-weight: 600" class="text-info">Jumlah Berita</span>
+                            <span style="font-weight: 400" class="text-info">Jumlah Berita</span>
                             <p class="mt-3 mb-0">
                                 <i class="fa text-info fa-newspaper" aria-hidden="true" style="font-size: 30px"></i>
                             </p>
