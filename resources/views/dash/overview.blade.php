@@ -85,12 +85,11 @@
                 <p>Ringkasan laporan dan pengguna.</p>
             </div>
             
-
             <div class="col-xl-8 mb-4 mb-xl-0">
                 <div class="card">
                     <div class="card-header d-flex align-items-center justify-content-between">
                         <strong>Data Laporan</strong>
-                        <button class="btn btn-success">Manage</button>
+                        <a href="{{ route('data_laporan') }}" class="btn btn-success">Manage</a>
                     </div>
                     <div class="card-body">
                         mm
@@ -102,7 +101,6 @@
                 <div class="card">
                     <div class="card-header d-flex align-items-center justify-content-between">
                         <strong>Pengguna</strong>
-                        <button class="btn btn-success">Manage</button>
                     </div>
                     <div class="card-body">
                         mm
