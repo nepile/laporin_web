@@ -25,3 +25,7 @@ Route::get('/management_petugas', [ManagementUser::class, 'v_petugas'])->name('m
 // });
 Route::get('/berita', [Berita::class, 'v_berita'])->name('berita');
 Route::get('/pengaturan', [PengaturanController::class, 'v_pengaturan'])->name('pengaturan');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
