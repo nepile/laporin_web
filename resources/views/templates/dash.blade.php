@@ -28,8 +28,7 @@
     <script>
     $(document).ready(function () {
         $('#data_laporan').DataTable();
-        $('#masyarakat').DataTable();
-        $('#petugas').DataTable();
+        $('#pengguna').DataTable();
     });
     </script>
 </body>

@@ -7,7 +7,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
-class UserSeeder extends Seeder
+class MasyarakatSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,12 +15,13 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         DB::table('users')->insert([
-            'nama' => 'Neville Jeremy',
-            'username' => 'Neville',
-            'nip' => 206765,
+            'nama' => 'Ghibran',
+            'username' => 'ghibran',
+            'email' => 'gibran@gmail.com',
             'password' => Hash::make('206765'),
             'telp' => '082373914639',
-            'role' => 'admin',
+            'email_verified_at' => date('Y-m-d', strtotime('now')),
+            'role' => 'masyarakat',
         ]);
     }
 }

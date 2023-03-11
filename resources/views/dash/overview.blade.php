@@ -85,7 +85,7 @@
                 <p>Ringkasan laporan dan pengguna.</p>
             </div>
             
-            <div class="col-xl-8 mb-4 mb-xl-0">
+            <div class="col-xl-7 mb-4 mb-xl-0">
                 <div class="card">
                     <div class="card-header d-flex align-items-center justify-content-between">
                         <strong>Data Laporan</strong>
@@ -97,13 +97,36 @@
                 </div>
             </div>
             
-            <div class="col-xl-4">
+            <div class="col-xl-5">
                 <div class="card">
                     <div class="card-header d-flex align-items-center justify-content-between">
                         <strong>Pengguna</strong>
                     </div>
                     <div class="card-body">
-                        mm
+                        <div class="table-responsive">
+                            <table class="table table-striped" id="pengguna">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ($users as $item)
+                                    <tr>
+                                        <td class="d-flex align-items-center">
+                                            <div style="width: 50px; height: 50px; border-radius: 100%; padding: 2px; background: #5BC0F8">
+                                                <img src="{{ asset('img/profil.png') }}" style="object-fit: cover; width: 100%; height: 100%; border-radius: 100%" alt="">
+                                            </div>
+                                            <div class="ms-2">
+                                                <p class="mb-0 text-muted" style="font-size: 14px; font-weight: 600">{{ $item->nama }}</p>
+                                                <p class="mb-0 px-3 @if($item->role == 'masyarakat') bg-primary @elseif($item->role == 'petugas') bg-warning @endif text-light" style="font-size: 12px; border-radius: 25px">{{ $item->role }}</p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
