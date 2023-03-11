@@ -40,7 +40,7 @@
                             </p>
                         </div>
                         <p class="mb-0 text-primary" style="font-weight: 800; font-size: 21px"> 
-                            80
+                            {{ $count_masyarakat }}
                         </p>
                     </div>
                 </div>
@@ -56,7 +56,7 @@
                             </p>
                         </div>
                         <p class="mb-0 text-warning" style="font-weight: 800; font-size: 21px"> 
-                            80
+                            {{ $count_petugas }}
                         </p>
                     </div>
                 </div>
@@ -72,7 +72,7 @@
                             </p>
                         </div>
                         <p class="mb-0 text-info" style="font-weight: 800; font-size: 21px"> 
-                            80
+                            {{ $count_berita }}
                         </p>
                     </div>
                 </div>
