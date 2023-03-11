@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="{{ asset('css/splash.css') }}">
 </head>
 <body>
-    <div class="splash" style="background-color: #fff;">
-        <img src="{{ asset('img/logo2.png') }}" class="fade-in">
+    <div class="splash" style="background-color: #000;">
+        <img src="{{ asset('img/logo3.png') }}" class="fade-in">
     </div>
     @include('components.navbar')
     @yield('dash-content')
