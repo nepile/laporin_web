@@ -29,6 +29,12 @@
             </div>
 
             <div class="col-xl-12 mt-4">
+                @if(session()->has('error'))
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <span>{{ session('error') }}</span>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                @endif
                 <form action="/handle_login" method="POST">
                     @csrf
                     <div class="mt-3">

@@ -33,4 +33,11 @@ class LoginController extends Controller
 
         return redirect()->back()->with('error', 'NIP atau password salah!');
     }
+
+    public function handle_logout()
+    {
+        Auth::logout();
+
+        return redirect()->route('home');
+    }
 }
