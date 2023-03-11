@@ -10,6 +10,7 @@
     <link rel="icon" href="{{ asset('img/icon.ico') }}">
     <link rel="stylesheet" href="{{ asset('css/public.css') }}">
     <link rel="stylesheet" href="{{ asset('css/splash.css') }}">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.3/css/dataTables.bootstrap5.min.css">
 </head>
 <body>
     <div class="splash" style="background-color: #000;">
@@ -21,5 +22,15 @@
     <script src="{{ asset('js/bs5.js') }}"></script>
     <script src="https://kit.fontawesome.com/a0f5cf7da9.js" crossorigin="anonymous"></script>
     <script src="{{ asset('js/splash.js') }}"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.3/js/dataTables.bootstrap5.min.js"></script>
+    <script>
+    $(document).ready(function () {
+        $('#data_laporan').DataTable();
+        $('#masyarakat').DataTable();
+        $('#petugas').DataTable();
+    });
+    </script>
 </body>
 </html>
