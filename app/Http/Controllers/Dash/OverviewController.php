@@ -21,6 +21,7 @@ class OverviewController extends Controller
             'count_berita' => Berita::count(),
             'users' => User::where('role', '!=', 'admin')->get(),
             'laporan' => Laporan::select(['foto_laporan', 'judul_laporan', 'status', 'jenis_laporan'])->get(),
+            'berita' => Berita::select(['id_berita', 'topik_berita', 'tgl_publish', 'asset_berita'])->paginate(3),
         ];
         return view('dash.overview', $data);
     }

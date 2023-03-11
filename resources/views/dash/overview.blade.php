@@ -15,7 +15,7 @@
 
         <div class="row text-dark position-relative px-3" style="top: -3.5em">
             <div class="col-xl-3 p-2">
-                <div class="card">
+                <div class="card" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px; border: 0">
                     <div class="card-body d-flex justify-content-between align-items-center">
                         <div class="">
                             <span style="font-weight: 400" class="text-danger">Jumlah Laporan</span>
@@ -31,7 +31,7 @@
             </div>
             
             <div class="col-xl-3 p-2">
-                <div class="card">
+                <div class="card" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px; border: 0">
                     <div class="card-body d-flex justify-content-between align-items-center">
                         <div class="">
                             <span style="font-weight: 400" class="text-primary">Jumlah Masyarakat</span>
@@ -47,7 +47,7 @@
             </div>
             
             <div class="col-xl-3 p-2">
-                <div class="card">
+                <div class="card" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px; border: 0">
                     <div class="card-body d-flex justify-content-between align-items-center">
                         <div class="">
                             <span style="font-weight: 400" class="text-warning">Jumlah Petugas</span>
@@ -63,7 +63,7 @@
             </div>
 
             <div class="col-xl-3 p-2">
-                <div class="card">
+                <div class="card" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px; border: 0">
                     <div class="card-body d-flex justify-content-between align-items-center">
                         <div class="">
                             <span style="font-weight: 400" class="text-info">Jumlah Berita</span>
@@ -155,15 +155,55 @@
             </div>
         </div>
         
-        <div class="row mt-5 px-3">
+        <div class="row mt-5 px-3" style="row-gap: 20px;">
             <div class="col-12">
                 <h4 class="mb-0" style="font-weight: 700">Berita Terbaru</h4>
                 <p>Informasi mengenai tindakan lanjutan laporan</p>
                 <hr>
             </div>
-            <div class="">
-                disini card berita
+            
+            @if($count_berita > 0) 
+            @foreach ($berita as $item)
+                <div class="col-xl-4 mt-3 mt-xl-0">
+                    <div class="card" style="border-radius: 0">
+                        <div class="card-body p-0">
+                            <a href="#">
+                                <div class="col-xl-12" style="height: 50vh">
+                                    <img src="{{ asset('asset_berita/'.$item->asset_berita) }}" style="object-fit: cover; width: 100%; height: 100%;" alt="">
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="card-footer p-2" style="background: #fff; height: 120px; overflow-x: auto">
+                            <div class="mb-2">
+                             <a href="" style="color: #000; text-decoration: none;">
+                                <p class="mb-0" style="font-weight: 600; font-size: 19px">
+                                    {{ $item->topik_berita }}
+                                </p>
+                             </a>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p class="text-secondary mb-0" style="font-size: 13px">
+                                    {{ date('d M Y', strtotime($item->tgl_publish)) }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+
+            @else
+
+            <div class="row justify-content-center align-items-center">
+                <div class="col-xl-4 text-center">
+                    <img src="{{ asset('img/empty.svg') }}" style="object-fit: cover; width: 100%; height: 100%" alt="">
+                    <h6 class="text-secondary">Belum ada berita</h6>
+                </div>
             </div>
+
+            @endif
+            {!! $berita->links() !!}
+            
         </div>
     </div>
 @endsection

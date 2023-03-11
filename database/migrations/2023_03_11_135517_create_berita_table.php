@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('topik_berita');
             $table->date('tgl_publish');
             $table->string('deskripsi_berita');
+            $table->string('asset_berita');
             $table->timestamps();
         });
     }
