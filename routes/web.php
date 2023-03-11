@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\Auth\LoginController as Login;
 use App\Http\Controllers\Dash\BeritaController as Berita;
 use App\Http\Controllers\Dash\DataLaporanController as DataLaporan;
 use App\Http\Controllers\Dash\ManagementUserController as ManagementUser;
@@ -17,7 +17,8 @@ Route::get('/laporin_publik', [LandingPage::class, 'laporin_publik'])->name('lap
 Auth::routes();
 
 // autentikasi
-Route::get('/login', [AuthController::class, 'v_login'])->name('login');
+Route::get('/login', [Login::class, 'v_login'])->name('login');
+Route::post('/handle_login', [Login::class, 'handle_login']);
 
 // dashboard
 Route::get('/overview', [Overview::class, 'index'])->name('overview');

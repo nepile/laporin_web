@@ -25,16 +25,16 @@
             @else
             <div class="col-xl-9 col-12 mt-5">
                 <h5 style="font-weight: bold;" class="mb-0">Selamat Datang!</h5>
-                <p style="font-size: 13px;">Silakan login terlebih dahulu untuk mendapatkan akses.</p>
+                <p style="font-size: 13px;">Portal khusus petugas dan management.</p>
             </div>
 
             <div class="col-xl-12 mt-4">
                 <form action="/handle_login" method="POST">
                     @csrf
                     <div class="mt-3">
-                        <label for="username" style="font-weight: 500;">Username:</label>
-                        <input type="text" class="form-control @error('username') is-invalid @enderror" name="username" id="username" value="{{ old('username') }}" style="border-radius: 5px; height: 50px;" placeholder="Masukkan username anda">
-                        @error('username')
+                        <label for="nip" style="font-weight: 500;">NIP:</label>
+                        <input type="text" class="form-control @error('nip') is-invalid @enderror" name="nip" id="nip" value="{{ old('nip') }}" style="border-radius: 5px; height: 50px;" placeholder="Masukkan NIP anda">
+                        @error('nip')
                             <span class="text-danger" style="font-size: 12px">{{ $message }}</span>
                         @enderror
                     </div>
