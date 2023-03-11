@@ -9,12 +9,18 @@
     <link rel="stylesheet" href="{{ asset('css/bs5.css') }}">
     <link rel="stylesheet" href="{{ asset('css/public.css') }}">
     <link rel="icon" href="{{ asset('img/icon.ico') }}">
+    <link rel="stylesheet" href="{{ asset('css/splash.css') }}">
 </head>
 <body>
+    <div class="splash" style="background-color: #5BC0F8;">
+        <img src="{{ asset('img/logo.png') }}" class="fade-in">
+    </div>
+
     @include('components.navbar')
     @yield('lp-content')
     @include('components.footer')
     <script src="{{ asset('js/bs5.js') }}"></script>
     <script src="https://kit.fontawesome.com/a0f5cf7da9.js" crossorigin="anonymous"></script>
+    <script src="{{ asset('js/splash.js') }}"></script>
 </body>
 </html>
