@@ -20,6 +20,7 @@ class OverviewController extends Controller
             'count_petugas' => User::where('role', '=', 'petugas')->count(),
             'count_berita' => Berita::count(),
             'users' => User::where('role', '!=', 'admin')->get(),
+            'laporan' => Laporan::select(['foto_laporan', 'judul_laporan', 'status', 'jenis_laporan'])->get(),
         ];
         return view('dash.overview', $data);
     }

@@ -92,7 +92,30 @@
                         <a href="{{ route('data_laporan') }}" class="btn btn-success">Manage</a>
                     </div>
                     <div class="card-body">
-                        mm
+                        <div class="table-responsive">
+                            <table class="table table-striped" id="data_laporan">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ($laporan as $item)
+                                    <tr>
+                                        <td class="d-flex align-items-center">
+                                            <div class="rounded" style="width: 50px; height: 50px; padding: 2px; background: #5BC0F8">
+                                                <img class="rounded" src="{{ asset('img/profil.png') }}" style="object-fit: cover; width: 100%; height: 100%;" alt="">
+                                            </div>
+                                            <div class="ms-2">
+                                                <p class="mb-0 text-muted   " style="font-size: 14px; font-weight: 600">{{ $item->judul_laporan }}</p> <span>({{ $item->jenis_laporan }})</span>
+                                                <p class="mb-0 px-3 @if($item->status == 'menunggu') bg-secondary @elseif($item->status == 'diproses') bg-warning @elseif($item->status == 'berhasil') bg-success @elseif($item->status == 'ditolak') bg-danger @endif text-light" style="font-size: 12px; border-radius: 25px">{{ ucfirst($item->status) }}</p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -118,8 +141,8 @@
                                                 <img src="{{ asset('img/profil.png') }}" style="object-fit: cover; width: 100%; height: 100%; border-radius: 100%" alt="">
                                             </div>
                                             <div class="ms-2">
-                                                <p class="mb-0 text-muted" style="font-size: 14px; font-weight: 600">{{ $item->nama }}</p>
-                                                <p class="mb-0 px-3 @if($item->role == 'masyarakat') bg-primary @elseif($item->role == 'petugas') bg-warning @endif text-light" style="font-size: 12px; border-radius: 25px">{{ $item->role }}</p>
+                                                <p class="mb-0 text-muted   " style="font-size: 14px; font-weight: 600">{{ $item->nama }}</p>
+                                                <p class="mb-0 px-3 @if($item->role == 'masyarakat') bg-primary @elseif($item->role == 'petugas') bg-warning @endif text-light" style="font-size: 12px; border-radius: 25px">{{ ucfirst($item->role) }}</p>
                                             </div>
                                         </td>
                                     </tr>
@@ -135,7 +158,7 @@
         <div class="row mt-5 px-3">
             <div class="col-12">
                 <h4 class="mb-0" style="font-weight: 700">Berita Terbaru</h4>
-                <p>Informasi mengenai penanggulangan laporan</p>
+                <p>Informasi mengenai tindakan lanjutan laporan</p>
                 <hr>
             </div>
             <div class="">
