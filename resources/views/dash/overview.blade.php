@@ -5,7 +5,7 @@
         <div class="row bg-dark justify-content-center align-items-center" style="height: 50vh">
             <div class="col-12 mt-4 text-light p-4">
                 <h4 class="mb-0" style="font-weight: 700">
-                    Selamat Pagi, Admin!
+                    Selamat Pagi, {{ auth()->user()->username }}!
                 </h4>
                 <p>
                     Silakan lihat data laporan <a href="{{ route('data_laporan') }}" class="text-light">disini.</a>
