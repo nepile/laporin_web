@@ -1,6 +1,5 @@
 @extends('templates.dash')
 
-
 @section('dash-content')
     <div class="container-fluid mb-5">
         <div class="row bg-dark justify-content-center align-items-center" style="height: 50vh">
@@ -9,7 +8,7 @@
                     Selamat Pagi, Admin!
                 </h4>
                 <p>
-                    Silakan lihat data laporan <a href="#laporan" class="text-light">disini.</a>
+                    Silakan lihat data laporan <a href="{{ route('data_laporan') }}" class="text-light">disini.</a>
                 </p>
             </div>
         </div>
