@@ -13,6 +13,7 @@ class HandleApiController extends Controller
     {
         $berita = Berita::all();
         return response()->json([
+            'code' => 200,
             'data' => $berita
         ]);
     }
@@ -21,6 +22,7 @@ class HandleApiController extends Controller
     {
         $laporan = DB::table('laporan')->where('visibilitas', '=', 'publik')->get();
         return response()->json([
+            'code' => 200,
             'data' => $laporan,
         ]);
     }
