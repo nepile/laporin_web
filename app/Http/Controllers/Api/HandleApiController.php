@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Berita;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -13,15 +14,25 @@ class HandleApiController extends Controller
     public function login(Request $request)
     {
         $credentials = $request->only('email', 'password');
-
-        if (Auth::attempt($credentials)) {
-            return response()->json([
-                'message' => 'Login Success'
-            ], 200);
+        if ($request->email != false && $request->password != false) {
+            if (Auth::attempt($credentials)) {
+                $user = User::where('email', '=', $request->email)->first();
+                return response()->json([
+                    'status' => 200,
+                    'message' => 'Berhasil Login',
+                    'user' => $user,
+                ]);
+            } else {
+                return response()->json([
+                    'status' => 401,
+                    'message' => 'Username atau password salah!'
+                ]);
+            }
         } else {
             return response()->json([
-                'message' => 'Invalid email or password'
-            ], 401);
+                'status' => 404,
+                'message' => 'Pastikan input tidak boleh kosong!'
+            ]);
         }
     }
 
