@@ -45,9 +45,6 @@
             <a class="text-decoration-none" href="{{ route('berita') }}">
                 <p class="mb-0 text-light">Berita</p>
             </a>
-            <a class="text-decoration-none" href="{{ route('pengaturan') }}">
-                <p class="mb-0 text-light">Pengaturan</p>
-            </a>
             @endif
         </div>
 

@@ -49,9 +49,12 @@
             
             @if($id_page != 'dash-6')
             <div class="navbar-nav ms-auto text-center">
-                <a href="{{ route('pengaturan') }}" class="bg-dark nav-item nav-link btn text-light px-4 mx-4" style="border-radius: 20px; font-weight: bold; border: 0">
-                    <i class="fa fa-cog"></i> <span class="ms-1">Pengaturan</span>
-                </a>
+                <form action="/handle_logout" method="POST">
+                    @csrf
+                    <button type="submit" class="bg-dark nav-item nav-link btn text-light px-4 mx-4" style="border-radius: 20px; border: 0">
+                        <i class="fa fa-sign-out"></i> <span class="ms-1">Keluar</span>
+                    </button>
+                </form>
             </div>
             @endif
 
