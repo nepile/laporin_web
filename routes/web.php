@@ -29,6 +29,7 @@ Route::middleware('auth')->group(function () {
         Route::prefix('/management_user')->group(function () {
             Route::get('/management_masyarakat', [ManagementUser::class, 'v_masyarakat'])->name('management_masyarakat');
             Route::get('/management_petugas', [ManagementUser::class, 'v_petugas'])->name('management_petugas');
+            Route::post('/hapus_user/{id}', [ManagementUser::class, 'hapus_user']);
         });
         Route::post('/hapus_permanen/{id_laporan}', [DataLaporan::class, 'hapus_permanen']);
     });
