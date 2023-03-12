@@ -2,7 +2,7 @@
 <footer class="container-fluid bottom-0">
     <div class="row py-5 text-light d-flex bg-dark justify-content-evenly">
         <div class="col-xl-4 col-md-12 col-sm-12">
-            <a href="#home" class="d-block text-light text-decoration-none">
+            <a href="#" class="d-block text-light text-decoration-none">
                 <img src="{{ asset('img/logo.png') }}" height="50" alt="laporin Logo" class="mb-3">
                 <span class="ms-2" style="font-size: 25px;">
                     <strong>Laporin.</strong>
