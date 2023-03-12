@@ -17,6 +17,7 @@ class DataLaporanController extends Controller
             'title' => 'Data Laporan',
             'id_page' => 'dash-2',
             'laporan' => Laporan::select(['id_laporan', 'foto_laporan', 'judul_laporan', 'status', 'isi_laporan', 'jenis_laporan'])->get(),
+            'count_laporan' => Laporan::count(),
         ];
 
         return view('dash.data_laporan', $data);

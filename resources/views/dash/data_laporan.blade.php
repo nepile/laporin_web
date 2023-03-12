@@ -32,9 +32,11 @@
                         </strong>
 
                         <div class="dropdown">
+                            @if($count_laporan > 0)
                             <button class="btn btn-danger dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              Export PDF
+                                Export PDF
                             </button>
+                            @endif
                             <ul class="dropdown-menu">
                               <form action="/export_data" method="POST">
                                 @csrf
