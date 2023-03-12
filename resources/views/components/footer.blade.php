@@ -1,4 +1,3 @@
-
 <footer class="container-fluid bottom-0">
     <div class="row py-5 text-light d-flex bg-dark justify-content-evenly">
         <div class="col-xl-4 col-md-12 col-sm-12">
