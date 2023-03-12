@@ -85,7 +85,7 @@
                 <p>Ringkasan laporan dan pengguna.</p>
             </div>
             
-            <div class="col-xl-7 mb-4 mb-xl-0">
+            <div class="@if(auth()->user()->role == 'admin') col-xl-7 @else col-12 @endif mb-4 mb-xl-0">
                 <div class="card">
                     <div class="card-header d-flex align-items-center justify-content-between">
                         <strong>Data Laporan</strong>
@@ -127,6 +127,8 @@
                 </div>
             </div>
             
+            @if (auth()->user()->role == 'admin')
+            
             <div class="col-xl-5">
                 <div class="card">
                     <div class="card-header d-flex align-items-center justify-content-between">
@@ -160,6 +162,7 @@
                     </div>
                 </div>
             </div>
+            @endif
         </div>
         
         <div class="row mt-5 px-3" style="row-gap: 20px;">
