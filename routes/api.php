@@ -6,3 +6,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/berita', [HandleApi::class, 'getBerita']);
 Route::get('/laporan_publik', [HandleApi::class, 'getLaporanPublik']);
+Route::post('/login', [HandleApi::class, 'login']);
