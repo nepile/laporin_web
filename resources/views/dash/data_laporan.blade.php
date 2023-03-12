@@ -29,13 +29,16 @@
                               Export PDF
                             </button>
                             <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="#">Semua</a></li>
-                              <li><a class="dropdown-item" href="#">Pengaduan</a></li>
-                              <li><a class="dropdown-item" href="#">Aspirasi</a></li>
-                              <li><a class="dropdown-item" href="#">Berhasil</a></li>
-                              <li><a class="dropdown-item" href="#">Diproses</a></li>
-                              <li><a class="dropdown-item" href="#">Menunggu</a></li>
-                              <li><a class="dropdown-item" href="#">Ditolak</a></li>
+                              <form action="/export_data" method="POST">
+                                @csrf
+                                <li><input class="dropdown-item" type="submit" name="semua" value="Semua" /></li>
+                                <li><input class="dropdown-item" type="submit" name="pengaduan" value="Pengaduan" /></li>
+                                <li><input class="dropdown-item" type="submit" name="aspirasi" value="Aspirasi" /></li>
+                                <li><input class="dropdown-item" type="submit" name="berhasil" value="Berhasil" /></li>
+                                <li><input class="dropdown-item" type="submit" name="diproses" value="Diproses" /></li>
+                                <li><input class="dropdown-item" type="submit" name="menunggu" value="Menunggu" /></li>
+                                <li><input class="dropdown-item" type="submit" name="ditolak" value="Ditolak" /></li>
+                              </form>
                             </ul>
                           </div>
                     </div>

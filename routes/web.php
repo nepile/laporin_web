@@ -30,4 +30,5 @@ Route::middleware('auth')->group(function () {
         Route::get('/management_petugas', [ManagementUser::class, 'v_petugas'])->name('management_petugas');
     });
     Route::get('/berita', [Berita::class, 'v_berita'])->name('berita');
+    Route::post('/export_data', [DataLaporan::class, 'export_data']);
 });
