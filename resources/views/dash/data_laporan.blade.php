@@ -56,7 +56,7 @@
                                                 <img class="rounded" src="{{ asset('foto_laporan/jalanrusak.png') }}" style="object-fit: cover; width: 100%; height: 100%;" alt="">
                                             </div>
                                             <div class="ms-2">
-                                                <p class="mb-0 text-muted" style="font-size: 14px; font-weight: 600">{{ $item->judul_laporan }}</p>
+                                                <p class="mb-0 text-muted" style="font-size: 15px; font-weight: 600">{{ $item->judul_laporan }}</p>
                                                 <span class="mb-0 px-3 @if($item->jenis_laporan == 'pengaduan') bg-primary @elseif($item->jenis_laporan == 'aspirasi') bg-warning @endif text-light" style="font-size: 12px; border-radius: 25px">{{ ucfirst($item->jenis_laporan) }}</span>
                                                 <span class="mb-0 px-3 @if($item->status == 'menunggu') bg-secondary @elseif($item->status == 'diproses') bg-warning @elseif($item->status == 'berhasil') bg-success @elseif($item->status == 'ditolak') bg-danger @endif text-light" style="font-size: 12px; border-radius: 25px">{{ ucfirst($item->status) }}</span>
                                             </div>
