@@ -93,7 +93,7 @@
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table table-striped" id="data_laporan">
+                            <table class="table" id="data_laporan">
                                 <thead>
                                     <tr>
                                         <th></th>
@@ -104,11 +104,12 @@
                                     <tr>
                                         <td class="d-flex align-items-center">
                                             <div class="rounded" style="width: 50px; height: 50px; padding: 2px; background: #5BC0F8">
-                                                <img class="rounded" src="{{ asset('img/profil.png') }}" style="object-fit: cover; width: 100%; height: 100%;" alt="">
+                                                <img class="rounded" src="{{ asset('foto_laporan/jalanrusak.png') }}" style="object-fit: cover; width: 100%; height: 100%;" alt="">
                                             </div>
                                             <div class="ms-2">
-                                                <p class="mb-0 text-muted   " style="font-size: 14px; font-weight: 600">{{ $item->judul_laporan }}</p> <span>({{ $item->jenis_laporan }})</span>
-                                                <p class="mb-0 px-3 @if($item->status == 'menunggu') bg-secondary @elseif($item->status == 'diproses') bg-warning @elseif($item->status == 'berhasil') bg-success @elseif($item->status == 'ditolak') bg-danger @endif text-light" style="font-size: 12px; border-radius: 25px">{{ ucfirst($item->status) }}</p>
+                                                <p class="mb-0 text-muted" style="font-size: 14px; font-weight: 600">{{ $item->judul_laporan }}</p>
+                                                <span class="mb-0 px-3 @if($item->jenis_laporan == 'pengaduan') bg-primary @elseif($item->jenis_laporan == 'aspirasi') bg-warning @endif text-light" style="font-size: 12px; border-radius: 25px">{{ ucfirst($item->jenis_laporan) }}</span>
+                                                <span class="mb-0 px-3 @if($item->status == 'menunggu') bg-secondary @elseif($item->status == 'diproses') bg-warning @elseif($item->status == 'berhasil') bg-success @elseif($item->status == 'ditolak') bg-danger @endif text-light" style="font-size: 12px; border-radius: 25px">{{ ucfirst($item->status) }}</span>
                                             </div>
                                         </td>
                                     </tr>
