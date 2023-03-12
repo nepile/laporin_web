@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('foto_laporan');
             $table->date('tgl_laporan');
             $table->enum('jenis_laporan', ['pengaduan', 'aspirasi']);
+            $table->enum('visibilitas', ['publik', 'rahasia']);
             $table->enum('status', ['menunggu', 'diproses', 'berhasil', 'ditolak']);
             $table->timestamps();
         });
