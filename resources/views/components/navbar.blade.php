@@ -34,6 +34,7 @@
             <div class="navbar-nav ms-auto">
                 <a href="{{ route('overview') }}" class="nav-item nav-link text-center mx-4" @if($id_page == 'dash-1') style="color: #000; border-bottom: 2px solid #000;" @endif>Overview</a>
                 <a href="{{ route('data_laporan') }}" class="nav-item nav-link text-center mx-4" @if($id_page == 'dash-2') style="color: #000; border-bottom: 2px solid #000;" @endif>Data Laporan</a>
+                @if(auth()->user()->role == 'admin')
                 <li class="nav-item dropdown text-center">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" @if($id_page == 'dash-3' || $id_page == 'dash-4') style="color: #000; border-bottom: 2px solid #000;" @endif>
                       Management Users
@@ -43,6 +44,7 @@
                       <li><a class="dropdown-item" href="{{ route('management_petugas') }}" @if($id_page == 'dash-4') style="color: #000; background: #fff;" @endif>Management Petugas</a></li>
                     </ul>
                   </li>
+                @endif
                 <a href="{{ route('berita') }}" class="nav-item nav-link text-center mx-4" @if($id_page == 'dash-5') style="color: #000; border-bottom: 2px solid #000;" @endif>Berita</a>
             </div>
 
