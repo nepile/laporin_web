@@ -97,11 +97,12 @@
                                 <thead>
                                     <tr>
                                         <th></th>
+                                        <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach ($laporan as $item)
-                                    <tr>
+                                    <tr style="vertical-align: middle">
                                         <td class="d-flex align-items-center">
                                             <div class="rounded" style="width: 50px; height: 50px; padding: 2px; background: #5BC0F8">
                                                 <img class="rounded" src="{{ asset('foto_laporan/jalanrusak.png') }}" style="object-fit: cover; width: 100%; height: 100%;" alt="">
@@ -111,6 +112,11 @@
                                                 <span class="mb-0 px-3 @if($item->jenis_laporan == 'pengaduan') bg-primary @elseif($item->jenis_laporan == 'aspirasi') bg-warning @endif text-light" style="font-size: 12px; border-radius: 25px">{{ ucfirst($item->jenis_laporan) }}</span>
                                                 <span class="mb-0 px-3 @if($item->status == 'menunggu') bg-secondary @elseif($item->status == 'diproses') bg-warning @elseif($item->status == 'berhasil') bg-success @elseif($item->status == 'ditolak') bg-danger @endif text-light" style="font-size: 12px; border-radius: 25px">{{ ucfirst($item->status) }}</span>
                                             </div>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-primary">
+                                                <i class="fa fa-eye" style="font-size: 13px"></i>
+                                            </button>
                                         </td>
                                     </tr>
                                     @endforeach
