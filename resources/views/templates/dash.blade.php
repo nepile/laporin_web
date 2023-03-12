@@ -29,6 +29,7 @@
     $(document).ready(function () {
         $('#data_laporan').DataTable();
         $('#pengguna').DataTable();
+        $('#berita').DataTable();
     });
     </script>
 </body>
