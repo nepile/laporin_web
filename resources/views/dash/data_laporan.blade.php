@@ -15,9 +15,16 @@
                 </p>
             </div>
         </div>
-
         <div class="row" style="position: relative; bottom: 50px;">
             <div class="col-xl-12">
+                
+                @if(session()->has('warning'))
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <span>{{ session('warning') }}</span>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                @endif
+
                 <div class="card">
                     <div class="card-header d-flex align-items-center justify-content-between">
                         <strong>
@@ -68,11 +75,43 @@
                                             <button class="btn btn-primary">
                                                 <i class="fa fa-eye"></i>
                                             </button>
-                                            <button class="btn mt-2 mt-xl-0 btn-danger">
-                                                <i class="fa fa-ban"></i>
+                                            <button class="btn mt-2 mt-xl-0 btn-danger" title="Hapus Permanen" data-bs-toggle="modal" data-bs-target="{{ '#hapus'.$item->id_laporan }}">
+                                                <i class="fa fa-trash"></i>
                                             </button>
                                         </td>
                                     </tr>
+
+                                    <div class="modal fade" id="{{ 'hapus'.$item->id_laporan }}" tabindex="-1" aria-labelledby="{{ 'hapus'.$item->id_laporan.'label' }}" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header border-0 bg-danger text-light">
+                                                <h1 class="modal-title fs-5" style="font-weight: bold" id="{{ 'hapus'.$item->id_laporan.'label' }}">
+                                                    <i class="fa fa-exclamation-triangle"></i> Perhatian
+                                                </h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+
+                                            <div class="modal-body">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                         <div>
+                                                            <p class="mb-0 text-muted" style="font-size: 15px; font-weight: 600">{{ $item->judul_laporan }}</p>
+                                                            <span class="mb-0 px-3 @if($item->jenis_laporan == 'pengaduan') bg-primary @elseif($item->jenis_laporan == 'aspirasi') bg-warning @endif text-light" style="font-size: 12px; border-radius: 25px">{{ ucfirst($item->jenis_laporan) }}</span>
+                                                            <span class="mb-0 px-3 @if($item->status == 'menunggu') bg-secondary @elseif($item->status == 'diproses') bg-warning @elseif($item->status == 'berhasil') bg-success @elseif($item->status == 'ditolak') bg-danger @endif text-light" style="font-size: 12px; border-radius: 25px">{{ ucfirst($item->status) }}</span>
+                                                            <p class="mb-0 text-muted" style="font-size: 12px; font-weight: 300">{{ $item->isi_laporan }}</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer border-0">
+                                                <form action="{{ '/hapus_permanen/'.$item->id_laporan }}" method="POST">
+                                                    @csrf
+                                                    <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i> Hapus Permanen</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
                                     @endforeach
                                 </tbody>
                             </table>

@@ -25,9 +25,12 @@ Route::post('/handle_logout', [Login::class, 'handle_logout']);
 Route::middleware('auth')->group(function () {
     Route::get('/overview', [Overview::class, 'index'])->name('overview');
     Route::get('/data_laporan', [DataLaporan::class, 'v_dataLaporan'])->name('data_laporan');
-    Route::middleware('role:admin')->prefix('/management_user')->group(function () {
-        Route::get('/management_masyarakat', [ManagementUser::class, 'v_masyarakat'])->name('management_masyarakat');
-        Route::get('/management_petugas', [ManagementUser::class, 'v_petugas'])->name('management_petugas');
+    Route::middleware(['role:admin'])->group(function () {
+        Route::prefix('/management_user')->group(function () {
+            Route::get('/management_masyarakat', [ManagementUser::class, 'v_masyarakat'])->name('management_masyarakat');
+            Route::get('/management_petugas', [ManagementUser::class, 'v_petugas'])->name('management_petugas');
+        });
+        Route::post('/hapus_permanen/{id_laporan}', [DataLaporan::class, 'hapus_permanen']);
     });
     Route::get('/berita', [Berita::class, 'v_berita'])->name('berita');
     Route::post('/export_data', [DataLaporan::class, 'export_data']);

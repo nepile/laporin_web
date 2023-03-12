@@ -7,6 +7,7 @@ use App\Models\Laporan;
 use Dompdf\Dompdf;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Svg\Tag\Rect;
 
 class DataLaporanController extends Controller
 {
@@ -15,7 +16,7 @@ class DataLaporanController extends Controller
         $data = [
             'title' => 'Data Laporan',
             'id_page' => 'dash-2',
-            'laporan' => Laporan::select(['foto_laporan', 'judul_laporan', 'status', 'jenis_laporan'])->get(),
+            'laporan' => Laporan::select(['id_laporan', 'foto_laporan', 'judul_laporan', 'status', 'isi_laporan', 'jenis_laporan'])->get(),
         ];
 
         return view('dash.data_laporan', $data);
@@ -65,5 +66,13 @@ class DataLaporanController extends Controller
         $pdf->setPaper('A4', 'portrait');
         $pdf->render();
         return $pdf->stream($data['title'] . ' - ' . date('d M Y') . '.pdf');
+    }
+
+    public function hapus_permanen($id_laporan)
+    {
+        $laporan = Laporan::find($id_laporan);
+        $laporan->delete();
+
+        return redirect()->back()->with('warning', 'Laporan berhasil di hapus permanen');
     }
 }
