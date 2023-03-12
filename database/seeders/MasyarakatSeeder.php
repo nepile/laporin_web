@@ -18,7 +18,7 @@ class MasyarakatSeeder extends Seeder
             'nama' => 'Ghibran',
             'username' => 'ghibran',
             'email' => 'gibran@gmail.com',
-            'password' => Hash::make('206765'),
+            'password' => Hash::make('123gibran456'),
             'telp' => '082373914639',
             'email_verified_at' => date('Y-m-d', strtotime('now')),
             'role' => 'masyarakat',
