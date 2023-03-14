@@ -21,6 +21,46 @@
                 <div class="card">
                     <div class="accordion" id="accordionExample">
                         <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <strong class="text-success">Tambah Berita</strong>
+                              </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                              <div class="accordion-body">
+                                <form action="/tambah_berita" method="POST" enctype="multipart/form-data">
+                                    @csrf
+                                    <div class="">
+                                        <label for="topik_berita">Topik Berita:</label>
+                                        <input type="text" name="topik_berita" class="form-control @error('topik_berita') is-invalid @enderror" value="{{ old('topik_berita') }}" id="topik_berita"  placeholder="Masukkan topik berita">    
+                                        @error('topik_berita')
+                                            <p class="text-danger" style="font-size: 12px">{{ $message }}</p>
+                                        @enderror
+                                    </div>
+
+                                    <div class="mt-3">
+                                        <label for="asset_berita">Foto Berita Terkait:</label>
+                                        <input type="file" accept=".png, .jpg, .jpeg" class="form-control @error('asset_berita') is-invalid @enderror" name="asset_berita" id="asset_berita">    
+                                        @error('asset_berita')
+                                            <p class="text-danger" style="font-size: 12px">{{ $message }}</p>
+                                        @enderror
+                                    </div>
+                                    
+                                    <div class="mt-3">
+                                        <label for="deskripsi_berita">Deskripsi Berita:</label>
+                                        <textarea name="deskripsi_berita" class="form-control @error('deskripsi_berita') is-invalid @enderror" rows="10" id="deskripsi_berita" placeholder="Masukkan deskripsi berita terkait..">{{ old('deskripsi_berita') }}</textarea>
+                                        @error('deskripsi_berita')
+                                            <p class="text-danger mb-0" style="font-size: 12px">{{ $message }}</p>
+                                        @enderror
+                                    </div>
+
+                                    <button class="btn btn-dark mt-3" type="submit">Publikasi Berita</button>
+                                </form> 
+                              </div>
+                            </div>
+                        </div>
+                          
+                        <div class="accordion-item">
                           <h2 class="accordion-header" id="headingOne">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                               <strong class="text-primary">Daftar Berita</strong>
@@ -68,18 +108,7 @@
                             </div>
                           </div>
                         </div>
-                        <div class="accordion-item">
-                          <h2 class="accordion-header" id="headingTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                              <strong class="text-success">Tambah Berita</strong>
-                            </button>
-                          </h2>
-                          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                              <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                            </div>
-                          </div>
-                        </div>
+
                     </div>
                 </div>
             </div>

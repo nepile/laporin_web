@@ -35,4 +35,5 @@ Route::middleware('auth')->group(function () {
     });
     Route::get('/berita', [Berita::class, 'v_berita'])->name('berita');
     Route::post('/export_data', [DataLaporan::class, 'export_data']);
+    Route::post('/tambah_berita', [Berita::class, 'tambah_berita']);
 });
